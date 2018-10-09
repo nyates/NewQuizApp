@@ -44,6 +44,25 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
+        falseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean givenAnswer = false;
+                if (givenAnswer == correctAnswer)
+                {
+                    toastMessageID = R.string.correct_toast;
+                }
+                else
+                {
+                    toastMessageID = R.string.incorrect_toast;
+                }
+
+                Toast.makeText(
+                        QuizActivity.this, toastMessageID, Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
+
     }
 
 }
