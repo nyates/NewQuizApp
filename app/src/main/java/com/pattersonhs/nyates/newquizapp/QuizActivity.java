@@ -13,7 +13,10 @@ public class QuizActivity extends AppCompatActivity {
     Button trueButton;
     Button falseButton;
     Button nextButton;
-    boolean correctAnswer = false;
+    Question[] questionArray = new Question[4];
+    int currentIndex = 0;
+    Question currentQ;
+    //boolean correctAnswer;
     int toastMessageID;
 
     @Override
@@ -25,11 +28,18 @@ public class QuizActivity extends AppCompatActivity {
         falseButton = (Button) findViewById(R.id.false_button);
         nextButton = (Button) findViewById(R.id.next_button);
 
+        questionArray[0] = new Question(R.string.q1, true);
+        questionArray[1] = new Question(R.string.q2, true);
+        questionArray[2] = new Question(R.string.q3, true);
+        questionArray[3] = new Question(R.string.q4, true);
+
+        currentQ = questionArray[currentIndex];
+
         trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 boolean givenAnswer = true;
-                if (givenAnswer == correctAnswer)
+                if (givenAnswer == currentQ.getCorrectAnswer())
                 {
                     toastMessageID = R.string.correct_toast;
                 }
@@ -48,7 +58,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 boolean givenAnswer = false;
-                if (givenAnswer == correctAnswer)
+                if (givenAnswer == currentQ.getCorrectAnswer())
                 {
                     toastMessageID = R.string.correct_toast;
                 }
