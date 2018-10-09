@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">NewQuizApp</string>
+    <string name="q1">Pi = 3</string>
+    <string name="q2">Pi = C/d</string>
+    <string name="q3">Pi is transcendental</string>
+    <string name="q4">Pi is rational</string>
+    <string name="true_button">TRUE</string>
+    <string name="false_button">FALSE</string>
+    <string name="next_button">SKIP</string>
+    <string name="hint_button">HINT</string>
+    <string name="score">Score:</string>
+    <string name="answer_text_view">Answer will appear here.</string>
+    <string name="correct_toast">Hooray! You got it!</string>
+    <string name="incorrect_toast">Nope. Are you crazy?</string>
+    <string name="warning_text">Are you sure you want the answer?</string>
+    <string name="show_answer_button">CONFIRM</string>
+    <string name="score_results">Your score is:</string>
+    <string name="prev_local_high_score">Local high score:</string>
+    <string name="prev_global_high_score">Global high score:</string>
+    <string name="restart_button">START OVER</string>
+    <string name="reset_local_high_scores_button">RESET LOCAL HIGH SCORE</string>
+    <string name="reset_global_high_scores_button">RESET GLOBAL HIGH SCORE</string>
+</resources>
