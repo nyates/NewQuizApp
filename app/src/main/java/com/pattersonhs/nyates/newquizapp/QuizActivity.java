@@ -73,6 +73,15 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentIndex++;
+                currentQ = questionArray[currentIndex];
+                qTextView.setText(R.string.q2);
+            }
+        });
+
     }
 
 }
