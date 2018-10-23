@@ -28,12 +28,14 @@ public class QuizActivity extends AppCompatActivity {
         falseButton = (Button) findViewById(R.id.false_button);
         nextButton = (Button) findViewById(R.id.next_button);
 
-        questionArray[0] = new Question(R.string.q1, true);
+        questionArray[0] = new Question(R.string.q1, false);
         questionArray[1] = new Question(R.string.q2, true);
         questionArray[2] = new Question(R.string.q3, true);
-        questionArray[3] = new Question(R.string.q4, true);
+        questionArray[3] = new Question(R.string.q4, false);
 
         currentQ = questionArray[currentIndex];
+
+        qTextView.setText(currentQ.getqTextId());
 
         trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,9 +78,9 @@ public class QuizActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentIndex++;
+                currentIndex = (currentIndex + 1) % questionArray.length;
                 currentQ = questionArray[currentIndex];
-                qTextView.setText(R.string.q2);
+                qTextView.setText(currentQ.qTextId);
             }
         });
 
